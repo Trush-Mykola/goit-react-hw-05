@@ -14,7 +14,7 @@ const SearchBox = ({ onSearch }) => {
 
   const onHandleSubmit = (values, actions) => {
     if (!values.search.trim()) {
-      toast.error("Please enter text to search for images.");
+      toast.error("Please enter movie name to search for it");
       return;
     }
     onSearch(values.search.trim().toLowerCase());
@@ -24,16 +24,16 @@ const SearchBox = ({ onSearch }) => {
 
   return (
     <>
-      <header className={css.header}>
+      <div>
         <Formik initialValues={{ search: "" }} onSubmit={onHandleSubmit}>
           <Form>
-            <Field className={css.input} name="search" type="text" placeholder="Search images and photos" autoComplete="off" autoFocus />
+            <Field className={css.input} name="search" type="text" placeholder="Search movies" autoComplete="off" autoFocus />
             <button className={css.btn} type="submit">
               Search
             </button>
           </Form>
         </Formik>
-      </header>
+      </div>
     </>
   );
 };

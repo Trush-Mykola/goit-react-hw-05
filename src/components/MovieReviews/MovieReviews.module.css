@@ -1,0 +1,14 @@
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.wrapper {
+  padding: 0 15px;
+}
+li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.author {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
